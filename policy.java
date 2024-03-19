@@ -6,8 +6,8 @@ public class Policy
    private String policyHolderSecondName;
    private int policyHolderAge;
    private String policyHolderSmoking;
-   private double policyHolderHeight;
-   private double policyHolderWeight;
+   private int policyHolderHeight;
+   private int policyHolderWeight;
    
    public Policy()
    {
@@ -22,7 +22,7 @@ public class Policy
    }
    
    
-   public Policy(int policyNumber, String providerName, String policyHolderFirstName, String policyHolderSecondName, int policyHolderAge, String policyHolderSmoking, double policyHolderHeight, double policyHolderWeight)
+   public Policy(int policyNumber, String providerName, String policyHolderFirstName, String policyHolderSecondName, int policyHolderAge, String policyHolderSmoking, int policyHolderHeight, int policyHolderWeight)
    {
       this.policyNumber = policyNumber;
       this.providerName = providerName;
@@ -111,25 +111,25 @@ public class Policy
    }
    
    //@return holders height
-   public double getPolicyHolderHeight()
+   public int getPolicyHolderHeight()
    {
       return policyHolderHeight;
    }
    
    //@param holders height
-   public void setPolicyHolderHeight(double policyHolderHeight)
+   public void setPolicyHolderHeight(int policyHolderHeight)
    {
       this.policyHolderHeight = policyHolderHeight;
    }
    
    //@return holders weight
-   public double getPolicyHolderWeight()
+   public int getPolicyHolderWeight()
    {
       return policyHolderWeight;
    }
    
    //@param holders weight 
-   public void setPolicyHolderWeight(double policyHolderWeight)
+   public void setPolicyHolderWeight(int policyHolderWeight)
    {
       this.policyHolderWeight = policyHolderWeight;
    }
@@ -144,7 +144,7 @@ public class Policy
    //@return Body Mass Index of holder
    public double policyHolderBMI()
    {
-      return ((policyHolderWeight * 703) / (policyHolderHeight * policyHolderHeight));
+      return (((double)policyHolderWeight * 703) / ((double)policyHolderHeight * (double)policyHolderHeight));
    }
    
    
@@ -195,5 +195,21 @@ public class Policy
       }
       
    }
-
+   
+   
+   //display information for policy holder
+   public void display(){
+      System.out.println("Policy Number: " + getPolicyNumber());
+      System.out.println("Provider Name: " + getProviderName());
+      System.out.println("Policyholder’s First Name: " + getPolicyHolderFirstName());
+      System.out.println("Policyholder’s Last Name: " + getPolicyHolderSecondName());
+      System.out.println("Policyholder’s Age: " + getPolicyHolderAge());
+      System.out.println("Policyholder’s Smoking Status: " + getPolicyHolderSmoking());
+      System.out.println("Policyholder’s Height: " + getPolicyHolderHeight() + " inches");
+      System.out.println("Policyholder’s Weight: " + getPolicyHolderWeight() + " pounds");
+      System.out.println("Policyholder’s BMI: " + String.format("%,.2f", policyHolderBMI()));
+      System.out.println("Policy Price: $" + String.format("%,.2f", policyPrice(policyHolderBMI())));
+      System.out.println("");
+   }
+   
 }
