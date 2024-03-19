@@ -26,56 +26,34 @@ public class Project_Calvin_Cutler
       
       while(inputFile.hasNext()) //keep going until end of file
       {
-         System.out.print("Policy Number: ");
-         int policyNumber = inputFile.nextInt();
-         
-         inputFile.nextLine(); //reset
-         System.out.println("");
-      
-         System.out.print("Provider Name: ");
-         String providerName = inputFile.nextLine();
-      
-         System.out.println("");
-      
-         System.out.print("Policyholder's First Name: ");
-         String policyHolderFirstName = inputFile.nextLine();
-         
-         System.out.println("");
 
-         System.out.print("Policyholder's Last Name: ");
-         String policyHolderLastName = inputFile.nextLine();
+         int policyNumber = inputFile.nextInt(); //policy number input
          
-         System.out.println("");
-         
-         System.out.print("Policyholder's Age: ");
-         int policyHolderAge = inputFile.nextInt();
-         
-         System.out.println("");
+         inputFile.nextLine(); //Scanner reset
 
-         System.out.print("Policyholder's Somking Status (smoker/non-smoker): ");
-         String policyHolderSmokingStatus = inputFile.nextLine();
+         String providerName = inputFile.nextLine(); //policy holder provider name input
+
+         String policyHolderFirstName = inputFile.nextLine(); //policy holder first name input
+
+         String policyHolderLastName = inputFile.nextLine(); //policy holder last name input
+
+         int policyHolderAge = inputFile.nextInt(); //policy holder age input
+
+         inputFile.nextLine(); //Scanner reset 
+
+         String policyHolderSmokingStatus = inputFile.nextLine(); //policy holer smoking status input
    
-         System.out.println("");
-         inputFile.nextLine(); //reset
+
+         int policyHolderHeight = inputFile.nextInt(); //policy holder height input
          
-         System.out.print("Policyholder's Height (in inches): ");
-         int policyHolderHeight = inputFile.nextInt();
-         
-         System.out.println("");
-      
-         System.out.print("Policyholder's Weight (in pounds): ");
-         int policyHolderWeight = inputFile.nextInt();
-         
-         System.out.println("");
+
+         int policyHolderWeight = inputFile.nextInt(); //policy holder weight input
       
          //initalize the policy
          Policys.add(new Policy(policyNumber, providerName, policyHolderFirstName, policyHolderLastName, policyHolderAge, policyHolderSmokingStatus, policyHolderHeight, policyHolderWeight));
          
       }
       inputFile.close();
-      System.out.println("SPACE");
-      System.out.println("SPACE");
-      System.out.println("SPACE");
             
       //displays each policy holders information
       for (int i = 0; i < Policys.size(); ++i){
