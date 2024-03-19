@@ -37,81 +37,98 @@ public class Policy
    
    
   //getters and setters in order
+  
+   //@return policyNumber - users policy number
    public int getPolicyNumber()
    {
       return policyNumber;
    }
    
+   //@param users policy number
    public void setPolicyNumber(int policyNumber)
    {
       this.policyNumber = policyNumber;
    }
-     
+   
+   //@return name of provider company
    public String getProviderName()
    {
       return providerName;
    }
    
+   //@param name of provider company
    public void setProviderName(String providerName)
    {
       this.providerName = providerName;
    }
- 
+   
+   //@return holders first name
    public String getPolicyHolderFirstName()
    {
       return policyHolderFirstName;
    }
    
+   //@param holders first name
    public void setPolicyHolderFirstName(String policyHolderFirstName)
    {
       this.policyHolderFirstName = policyHolderFirstName;
    }
-
+   
+   //@return holders last name
    public String getPolicyHolderSecondName()
    {
       return policyHolderSecondName;
    }
    
+   //@param holders last name
    public void setPolicyHolderSecondName(String policyHolderSecondName)
    {
       this.policyHolderSecondName = policyHolderSecondName;
    }
    
+   //@return holders age
    public int getPolicyHolderAge()
    {
       return policyHolderAge;
    }
    
+   //@param holders age
    public void setPolicyHolderAge(int policyHolderAge)
    {
       this.policyHolderAge = policyHolderAge;
    }
-
+   
+   //@return if policy holder smokes
    public String getPolicyHolderSmoking()
    {
       return policyHolderSmoking;
    }
    
+   //@param if policy holder smokes
    public void setPolicyHolderSmoking(String policyHolderSmoking)
    {
       this.policyHolderSmoking = policyHolderSmoking;
    }
    
+   //@return holders height
    public double getPolicyHolderHeight()
    {
       return policyHolderHeight;
    }
    
+   //@param holders height
    public void setPolicyHolderHeight(double policyHolderHeight)
    {
       this.policyHolderHeight = policyHolderHeight;
    }
-
+   
+   //@return holders weight
    public double getPolicyHolderWeight()
    {
       return policyHolderWeight;
    }
    
+   //@param holders weight 
    public void setPolicyHolderWeight(double policyHolderWeight)
    {
       this.policyHolderWeight = policyHolderWeight;
@@ -123,12 +140,16 @@ public class Policy
    
    
    //calculation methods
+   
+   //@return Body Mass Index of holder
    public double policyHolderBMI()
    {
       return ((policyHolderWeight * 703) / (policyHolderHeight * policyHolderHeight));
    }
    
    
+   //@param Body mass index of holder
+   //@return cost of policy for the holder
    public double policyPrice(double BMI)
    {
       if (policyHolderAge > 50)
