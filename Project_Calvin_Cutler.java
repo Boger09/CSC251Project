@@ -50,15 +50,15 @@ public class Project_Calvin_Cutler
          int policyHolderWeight = inputFile.nextInt(); //policy holder weight input
       
          //initalize the policy
-         Policys.add(new Policy(policyNumber, providerName, policyHolderFirstName, policyHolderLastName, policyHolderAge, policyHolderSmokingStatus, policyHolderHeight, policyHolderWeight));
+         Policys.add(new Policy(policyNumber, providerName, new PolicyHolder(policyHolderFirstName, policyHolderLastName, policyHolderAge, policyHolderSmokingStatus, policyHolderHeight, policyHolderWeight)));
          
       }
-      inputFile.close();
+      inputFile.close();   
             
       //displays each policy holders information
       for (int i = 0; i < Policys.size(); ++i){
-         Policys.get(i).display();
-         if(Policys.get(i).getPolicyHolderSmoking().equals("smoker"))
+         System.out.println(Policys.get(i).toString());
+         if(Policys.get(i).policyHolder.getPolicyHolderSmoking().equals("smoker"))
          {
             totalSmokers += 1;
          }
