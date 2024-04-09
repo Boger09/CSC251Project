@@ -3,6 +3,7 @@ public class Policy
    private int policyNumber;
    private String providerName;
    public PolicyHolder policyHolder;
+   public static int policyCount;
    
    public Policy()
    {
@@ -46,8 +47,19 @@ public class Policy
    {
       this.providerName = providerName;
    }
-      
-   //end of getters and setters
+   
+   
+   
+   //static methods
+   public static void getPolicyCount()
+   {
+   
+   }
+   
+   
+   //end of getters and setters 
+   
+   
    
    
    

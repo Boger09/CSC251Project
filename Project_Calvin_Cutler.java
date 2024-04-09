@@ -51,7 +51,7 @@ public class Project_Calvin_Cutler
       
          //initalize the policy
          Policys.add(new Policy(policyNumber, providerName, new PolicyHolder(policyHolderFirstName, policyHolderLastName, policyHolderAge, policyHolderSmokingStatus, policyHolderHeight, policyHolderWeight)));
-         
+         Policy.policyCount += 1;
       }
       inputFile.close();   
             
@@ -70,6 +70,8 @@ public class Project_Calvin_Cutler
          
       }
       //total smoking stats
+      System.out.println("There were " + Policy.policyCount + " Policy objects created.");
+      System.out.println("");
       System.out.println("The number of policies with a smoker is: " + totalSmokers);
       System.out.println("The number of policies with a non-smoker is: " + totalNonSmokers);
    }
